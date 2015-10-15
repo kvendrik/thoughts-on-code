@@ -84,6 +84,11 @@ pre > code {
   background-color: darken($bg-color, 5%);
 }
 
+:not(pre)>code[class*="language-"], pre[class*="language-"] {
+  font-size: $size-s;
+  background-color: darken($bg-color, 5%);
+}
+
 @include media($max-width: $breakpoint-sm){
   body {
     font-size: $size-m-sm;

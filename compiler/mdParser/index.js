@@ -16,6 +16,10 @@ mdParser.prototype._getRenderer = function(){
 	var mdRenderer = new marked.Renderer(),
 		self = this;
 
+	mdRenderer.code = function(code, language){
+		return '<pre><code class="language-'+language+'">'+code+'</code></pre>';
+	};
+
 	mdRenderer.heading = function(text, level){
 		var escapedParentChapterName = utils.escapeStr(self._currParsingChapterName),
 			escapedText = utils.escapeStr(text);

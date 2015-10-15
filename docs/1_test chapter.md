@@ -1,7 +1,9 @@
 Ice cream sesame snaps jelly-o. Marzipan halvah muffin toffee tootsie roll wafer lemon drops. Apple pie sugar plum wafer tiramisu pie apple pie cotton candy ice cream candy canes. Lemon drops cake bear claw ice cream marshmallow. Oat cake apple pie macaroon gummies bear claw pie cake macaroon pie. Lollipop gummi bears wafer sweet jelly-o. Cheesecake jelly beans brownie pie fruitcake liquorice fruitcake sweet roll pastry. Tart halvah carrot cake toffee bear claw cake carrot cake. Caramels donut gummi bears bonbon. Cake cookie toffee cupcake cotton candy tiramisu jelly-o cake. Tiramisu jelly beans sesame snaps. Tootsie roll gummi bears wafer dessert chocolate ice cream muffin cookie.
 
-```
-Candy canes jelly beans tootsie roll muffin candy canes chocolate bar chocolate cotton candy. Bonbon chocolate bar icing chocolate bar gummies caramels muffin. Marshmallow pie dessert oat cake pie gummi bears lollipop. Sweet roll candy canes jujubes gummies gummi bears.
+```javascript
+for(var i = 0; i < 10; i++){
+    console.log(i);
+}
 ```
 
 ###### sub chapter
