@@ -4,7 +4,7 @@
   bottom: 0;
   left: 0;
   
-  font-size: $size-s;
+  //font-size: $size-s;
   padding-top: 4em;
   
   width: $sidebar-width;
@@ -25,25 +25,26 @@
     
     a {
       display: block;
-      opacity: .4;
+      opacity: .6;
       
+      color: $base-color;
       padding: $spacing-s $spacing-l;
       
       @include transition(opacity);
       text-decoration: none;
       
       &:hover {
-        opacity: .8;
+        opacity: 1;
         
         &:before {
-          opacity: .4;
+          opacity: .6;
         }
       }
       
       &:before {
         content: '#';
         margin-right: $spacing-s;
-        opacity: .2;
+        opacity: .3;
       }
     }
   }
