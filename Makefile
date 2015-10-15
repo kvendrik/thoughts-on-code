@@ -3,7 +3,6 @@ all: compilemd
 compilemd:
 	node ./compiler/index.js
 
-build:
-	make compilemd
+build: compilemd
 	gulp build
 
