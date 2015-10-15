@@ -34,6 +34,7 @@
       
       &:hover {
         opacity: 1;
+        color: $base-color;
         
         &:before {
           opacity: .6;
