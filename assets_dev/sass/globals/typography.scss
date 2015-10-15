@@ -1,0 +1,62 @@
+h1,h2,h3,h4,h5,h6 {
+  font-weight: $body-weight;
+  margin-bottom: $spacing-m;
+}
+
+@for $i from 0 through 5 {
+  h#{$i+1} {
+    font-size: #{($headings-biggest-size - ($headings-steps*$i))};
+  }
+}
+
+p,ul,ol,pre {
+  margin-bottom: $spacing-m;
+}
+
+code, pre {
+  font-family: $body-family;
+}
+
+p {
+  font-family: $alt-family;
+}
+
+a {
+  color: $base-color;
+}
+
+a.a--h-anchor {
+  text-decoration: none;
+  color: $base-color;
+  
+  h1,h2,h3,h4,h5,h6 {
+    padding-top: 2em;
+    position: relative;
+    margin-top: -1em;
+    
+    &:hover {
+      &:before {
+        opacity: .6;
+      }
+    }
+
+    &:before {
+      content: '#';
+      position: absolute;
+      left: -1em;
+      opacity: .2;
+      @include transition(opacity);
+    }
+  }
+}
+
+code {
+  background-color: darken($bg-color, 5%);
+}
+
+pre > code {
+  white-space: pre-wrap;
+  display: block;
+  padding: $spacing-s $spacing-m;
+  background-color: darken($bg-color, 5%);
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Docs</title>
+    <link rel="stylesheet" type="text/css" href="/assets_public/css/main.min.css" />
+</head>
+<body>
+
+    <aside class="sidebar">
+        <ul class="sidebar__nav">
+            <%
+                for(chapterEscapedName in chapters){
+                    var details = chapters[chapterEscapedName];
+            %>
+                    <li><a href="#/<%= chapterEscapedName %>"><%= details.prettyName %></a>
+                        <%
+                            var subChapters = details.subChapters;
+                            if(Object.keys(subChapters).length > 0){
+                        %>
+                                <ul>
+                                    <% for(subChapterEscapedName in subChapters){ %>
+                                    <li><a href="#/<%= chapterEscapedName %>/<%= subChapterEscapedName %>"><%= subChapters[subChapterEscapedName] %></a></li>
+                                    <% }; %>
+                                </ul>
+                        <% } %>
+                    </li>
+            <% } %>
+        </ul>
+    </aside>
+
+    <div class="container">
+        <% chaptersHTML.forEach(function(html){ %>
+            <section class="chapter"><%- html %></section>
+        <% }); %>
+    </div>
+</body>
+</html>

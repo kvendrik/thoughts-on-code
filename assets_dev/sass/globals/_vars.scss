@@ -1,0 +1,24 @@
+$font-path-nitti: '/assets_public/fonts/nitti';
+@import "vendor/nitti";
+
+$body-family: 'nitti';
+$alt-family: 'nitti';
+$body-weight: 300;
+$body-line-height: 1.5em;
+
+$size-m: 16px;
+$size-s: .9em;
+
+$white: #fff;
+$base-color: #222;
+$bg-color: #f8f8f8;
+
+$spacing-s: .5em;
+$spacing-m: 1em;
+$spacing-l: 2em;
+$spacing-xl: 3em;
+
+$headings-biggest-size: 2.6em;
+$headings-steps: 0.3;
+
+$sidebar-width: 200px;

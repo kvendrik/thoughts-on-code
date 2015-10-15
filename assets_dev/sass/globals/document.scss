@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font: $body-weight $size-m $body-family;
+  color: $base-color;
+  background-color: $bg-color;
+  line-height: $body-line-height;
+}
+
+.container {
+  width: 600px;
+  margin-left: $sidebar-width+50px;
+}
+
+.chapter {
+  margin-bottom: 8em;
+  
+  &:first-child {
+    margin-top: 2em;
+  }
+}

@@ -1,0 +1,50 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  
+  font-size: $size-s;
+  padding-top: 4em;
+  
+  width: $sidebar-width;
+  
+  &__nav {
+    li {
+      display: block;
+      
+      > ul {
+        font-size: $size-s;
+        padding-left: $spacing-m;
+        
+        a {
+          padding-top: 0;
+        }
+      }
+    }
+    
+    a {
+      display: block;
+      opacity: .4;
+      
+      padding: $spacing-s $spacing-l;
+      
+      @include transition(opacity);
+      text-decoration: none;
+      
+      &:hover {
+        opacity: .8;
+        
+        &:before {
+          opacity: .4;
+        }
+      }
+      
+      &:before {
+        content: '#';
+        margin-right: $spacing-s;
+        opacity: .2;
+      }
+    }
+  }
+}
