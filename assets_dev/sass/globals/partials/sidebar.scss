@@ -27,7 +27,6 @@
       display: block;
       opacity: .6;
       
-      color: $base-color;
       padding: $spacing-s $spacing-l;
       
       @include transition(opacity);

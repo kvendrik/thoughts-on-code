@@ -8,6 +8,10 @@ h1,h2,h3,h4,h5,h6 {
   }
 }
 
+// h1 {
+//   color: $accent;
+// }
+
 @for $i from 0 through 5 {
   h#{$i+1} {
     font-size: #{($headings-biggest-size - ($headings-steps*$i))};
@@ -27,7 +31,13 @@ p {
 }
 
 a {
-  color: $accent;
+  color: $base-color;
+  text-decoration: underline;
+  @include transition(color);
+
+  &:hover {
+    color: $accent;
+  }
 }
 
 a.a--h-anchor {
@@ -41,7 +51,7 @@ a.a--h-anchor {
     
     &:hover {
       &:before {
-        opacity: .6;
+        opacity: .4;
       }
     }
 
@@ -49,7 +59,7 @@ a.a--h-anchor {
       content: '#';
       position: absolute;
       left: -1em;
-      opacity: .2;
+      opacity: 0;
       @include transition(opacity);
     }
   }
