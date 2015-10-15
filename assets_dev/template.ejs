@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Thoughts on Code</title>
+
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
     <link rel="stylesheet" type="text/css" href="assets_public/css/main.min.css" />
 </head>
 <body>
@@ -29,10 +31,14 @@
         </ul>
     </aside>
 
+    <a id="js-sidebar-collapse-btn" class="sidebar-collapse-btn ion-navicon" href="#"></a>
+
     <div class="container">
         <% chaptersHTML.forEach(function(html){ %>
             <section class="chapter"><%- html %></section>
         <% }); %>
     </div>
+
+    <script src="assets_public/js/main.js"></script>
 </body>
 </html>

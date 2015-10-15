@@ -12,12 +12,16 @@ body {
 }
 
 .container {
-  width: 700px;
-  margin: 0 auto;
+    width: 700px;
+    margin: 0 auto;
+
+    @include media($max-width: $breakpoint-sm){
+        width: 90%;
+    }
 }
 
 .chapter {
-  margin-bottom: 8em;
+  margin-bottom: 2em;
   
   &:first-child {
     margin-top: 2em;

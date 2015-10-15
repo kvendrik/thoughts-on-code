@@ -2,6 +2,7 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: bold;
   margin-bottom: $spacing-m;
   text-decoration: underline;
+  line-height: 1em;
 
   &:target {
     color: $accent;
@@ -81,4 +82,10 @@ pre > code {
   display: block;
   padding: $spacing-s $spacing-m;
   background-color: darken($bg-color, 5%);
+}
+
+@include media($max-width: $breakpoint-sm){
+  body {
+    font-size: $size-m-sm;
+  }
 }
