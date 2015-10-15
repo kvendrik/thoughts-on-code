@@ -15,7 +15,7 @@ docs/
     1_chapter 2.md
 ```
 
-Then compile it using `make`.
+Then compile them using `make`.
 
 #### Development
 If you'd like to alter the styling or scripts of the page you can use `gulp` to set up a local web server. It will also watch and compile your sass and js files.
