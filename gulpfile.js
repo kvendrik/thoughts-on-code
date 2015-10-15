@@ -36,7 +36,7 @@ gulp.task('connect', function(){
 
 gulp.task('watch', function(){
     gulp.watch(paths.js.src, ['concat']);
-    gulp.watch(paths.sass.all, ['css']);
+    gulp.watch(paths.sass.all, ['sass']);
 });
 
 gulp.task('sass', function () {
@@ -44,24 +44,31 @@ gulp.task('sass', function () {
         .pipe(sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
-        .pipe(rename(paths.sass.destFile))
-        .pipe(gulp.dest(paths.sass.destFolder));
-});
-
-gulp.task('autoprefixer', function () {
-    gulp.src(paths.sass.destFolder+paths.sass.destFile)
         .pipe(autoprefixer({
             expand: true,
             flatten: true,
             browsers: ['last 20 versions', 'ie 8', 'ie 9']
         }))
+        .pipe(rename(paths.sass.destFile))
         .pipe(gulp.dest(paths.sass.destFolder));
 });
+
+// gulp.task('autoprefixer', function () {
+//     gulp.src(paths.sass.destFolder+paths.sass.destFile)
+//         .pipe(autoprefixer({
+//             expand: true,
+//             flatten: true,
+//             browsers: ['last 20 versions', 'ie 8', 'ie 9']
+//         }))
+//         .pipe(gulp.dest(paths.sass.destFolder))
+//         .pipe(connect.reload());
+// });
 
 gulp.task('concat', function() {
     gulp.src(paths.js.src)
         .pipe(concat(paths.js.destFile))
-        .pipe(gulp.dest(paths.js.destFolder));
+        .pipe(gulp.dest(paths.js.destFolder))
+        .pipe(connect.reload());
 });
 
 gulp.task('uglify', function() {
@@ -71,8 +78,7 @@ gulp.task('uglify', function() {
         .pipe(gulp.dest(paths.js.destFolder));
 });
 
-gulp.task('css', ['sass']);
 gulp.task('js', ['concat', 'uglify']);
 
 gulp.task('default', ['connect', 'watch']);
-gulp.task('build', ['css', 'js']);
+gulp.task('build', ['sass', 'js']);
