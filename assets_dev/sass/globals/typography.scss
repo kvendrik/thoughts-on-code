@@ -1,11 +1,18 @@
 h1,h2,h3,h4,h5,h6 {
-  font-weight: $body-weight;
+  font-weight: bold;
   margin-bottom: $spacing-m;
   text-decoration: underline;
 
   &:target {
     color: $accent;
+    &:before {
+      opacity: 1 !important;
+    }
   }
+}
+
+h1 {
+  color: $accent;
 }
 
 // h1 {
